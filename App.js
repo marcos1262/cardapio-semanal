@@ -1,38 +1,31 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, { Component, useState } from "react";
+import { StatusBar } from 'react-native';
+import MainView from "./MainView/MainView";
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-});
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 
-export default class App extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
-    );
-  }
+const fetchFonts = () => {
+	return Font.loadAsync({
+		'PlaylistScript': require('./Resource/Font/PlaylistScript.otf'),
+		'Montserrat-Regular': require('./Resource/Font/Montserrat-Regular.ttf'),
+		'Montserrat-Bold': require('./Resource/Font/Montserrat-Bold.ttf'),
+	});
+};
+
+export default function App() {
+	StatusBar.setBarStyle('dark-content', true);
+
+	const [dataLoaded, setDataLoaded] = useState(false);
+	if(!dataLoaded)
+		return (
+			<AppLoading
+			startAsync={fetchFonts}
+			onFinish={() => setDataLoaded(true)}
+			/>
+		)
+	
+	return (
+		<MainView/>
+	)
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});

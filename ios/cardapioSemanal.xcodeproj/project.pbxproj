@@ -12,6 +12,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3DE4DAD41476765101945408 /* libPods-cardapioSemanal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FF9D506E70904424FA7E9 /* libPods-cardapioSemanal.a */; };
+		86BBA268C0D444F6BDCC7AB3 /* PlaylistScript.otf in Resources */ = {isa = PBXBuildFile; fileRef = 084CC6BC5A7E47B2A91302BD /* PlaylistScript.otf */; };
+		FF001814D8984A2DA21FA4B4 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06FBEF1EB3C747E6944FA6FD /* Montserrat-Regular.ttf */; };
+		B6147CBC41D6422A90CC6B55 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B5396A388D24F38915936B5 /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		D43FF9D506E70904424FA7E9 /* libPods-cardapioSemanal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cardapioSemanal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		084CC6BC5A7E47B2A91302BD /* PlaylistScript.otf */ = {isa = PBXFileReference; name = "PlaylistScript.otf"; path = "../Resource/Font/PlaylistScript.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06FBEF1EB3C747E6944FA6FD /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; name = "Montserrat-Regular.ttf"; path = "../Resource/Font/Montserrat-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B5396A388D24F38915936B5 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; name = "Montserrat-Bold.ttf"; path = "../Resource/Font/Montserrat-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				72E5486571395D51695C2A02 /* Pods */,
+				81F33140BB6E42359FAA6636 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -106,6 +113,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		81F33140BB6E42359FAA6636 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				084CC6BC5A7E47B2A91302BD /* PlaylistScript.otf */,
+				06FBEF1EB3C747E6944FA6FD /* Montserrat-Regular.ttf */,
+				7B5396A388D24F38915936B5 /* Montserrat-Bold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -136,7 +154,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -170,6 +188,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				86BBA268C0D444F6BDCC7AB3 /* PlaylistScript.otf in Resources */,
+				FF001814D8984A2DA21FA4B4 /* Montserrat-Regular.ttf in Resources */,
+				B6147CBC41D6422A90CC6B55 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
