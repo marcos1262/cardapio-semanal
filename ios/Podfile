@@ -45,4 +45,8 @@ target 'cardapioSemanal' do
   use_native_modules!
 
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
+  pod 'RNReanimated', :path => '../node_modules/react-native-reanimated'
+
 end

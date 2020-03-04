@@ -1,10 +1,29 @@
 import React, { Component } from "react";
-import { View, Image, TextInput, Text } from "react-native";
+import { View, Image, TextInput, AsyncStorage } from "react-native";
 
 import styles from './MealCell.style'
 import Images from '../../Resource/Image/'
 
 export default class MealCell extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            input: ''
+        };
+        this.storeKey = this.props.day + '_' + this.props.type
+    }
+
+    componentDidMount() {
+        AsyncStorage.getItem(this.storeKey).then((value) => {
+            this.setState({'input': value});
+        });
+    }
+
+    handleChangeInput = (text) =>  {
+        this.setState({input: text});
+        AsyncStorage.setItem(this.storeKey, text);
+    }
+
     render() {
         var image = Images.icons.snack;
         switch(this.props.type) {
@@ -22,6 +41,8 @@ export default class MealCell extends Component {
                 <TextInput
                 style={styles.input}
                 placeholder='Digite aqui uma refeição'
+                onChangeText={this.handleChangeInput}
+                value={this.state.input}
                 />
             </View>
         )
