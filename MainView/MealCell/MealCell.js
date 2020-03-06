@@ -15,7 +15,7 @@ export default class MealCell extends Component {
 
     componentDidMount() {
         AsyncStorage.getItem(this.storeKey).then((value) => {
-            this.setState({'input': value});
+            this.setState({input: value});
         });
     }
 

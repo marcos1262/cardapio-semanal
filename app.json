@@ -1,17 +1,28 @@
 {
-  "name": "cardapioSemanal",
-  "displayName": "cardapioSemanal",
+  "name": "CardapioSemanal",
+  "displayName": "Cardápio Semanal",
   "expo": {
-    "name": "cardapioSemanal",
-    "slug": "cardapioSemanal",
+    "name": "Cardápio Semanal",
+    "slug": "CardapioSemanal",
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "version": "1.0.0",
     "entryPoint": "node_modules/expo/AppEntry.js",
+    "icon": "./Resource/Image/icon.png",
     "platforms": [
       "ios",
       "android",
       "web"
-    ]
+    ],
+    "description": "Planejamento das refeições da semana",
+    "ios": {
+      "supportsTablet": true,
+      "buildNumber": "1.0.0",
+      "bundleIdentifier": "com.marcossantos.cardapioSemanal"
+    },
+    "android": {
+      "package": "com.marcossantos.cardapioSemanal",
+      "versionCode": 1
+    }
   }
 }
